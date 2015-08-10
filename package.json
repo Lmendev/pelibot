@@ -14,9 +14,12 @@
     "bot"
   ],
   "scripts": {
-    "start": "node index.js",
+    "start": "foreman ennode index.js",
     "test": "mocha test/index.js",
     "test-cov": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+  },
+  "engines": {
+    "node": "0.12.x"
   },
   "author": {
     "name": "Yago Pérez",
