@@ -47,7 +47,7 @@ function inicio (msg) {
 	status = 'waiting_for_city';
 }
 
-bot.on('message', function (msg) {
+bot.on('text', function (msg) {
 	console.log(msg);
 	
 	if (msg.text == '/start') { 
