@@ -14,12 +14,9 @@
     "bot"
   ],
   "scripts": {
-    "start": "foreman ennode index.js",
+    "start": "node index.js",
     "test": "mocha test/index.js",
     "test-cov": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
-  },
-  "engines": {
-    "node": "0.12.x"
   },
   "author": {
     "name": "Yago Pérez",
@@ -88,5 +85,6 @@
     "shasum": "5778653cad7889ca4d78793208769aa57ee3ec03",
     "tarball": "http://registry.npmjs.org/node-telegram-bot-api/-/node-telegram-bot-api-0.12.1.tgz"
   },
-  "_resolved": "https://registry.npmjs.org/node-telegram-bot-api/-/node-telegram-bot-api-0.12.1.tgz"
+  "_resolved": "https://registry.npmjs.org/node-telegram-bot-api/-/node-telegram-bot-api-0.12.1.tgz",
+  "readme": "ERROR: No README data found!"
 }
