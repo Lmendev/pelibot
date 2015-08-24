@@ -5,8 +5,14 @@ var request = require("request");
 var TelegramBot = require('node-telegram-bot-api');
  
 var token = '116276511:AAH4ZXkuYu9Fxygxxwv01UAYiWgSQ3Yct0I';
-// Setup polling way 
-var bot = new TelegramBot(token,  {webHook: {port: process.env.PORT || 3000}});
+
+var port = process.env.OPENSHIFT_NODEJS_PORT;
+var host = process.env.OPENSHIFT_NODEJS_IP;
+var domain = process.env.OPENSHIFT_APP_DNS;
+
+var bot = new TelegramBot(token, {webHook: {port: port, host: host}});
+// OpenShift enroutes :443 request to OPENSHIFT_NODEJS_PORT
+bot.setWebHook(domain+':443/bot'+token);
 
 var status = 'main';
 var city;
