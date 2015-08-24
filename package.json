@@ -1,5 +1,5 @@
 {
-  "name": "node-telegram-bot-api",
+  "name": "pelibot",
   "version": "0.12.1",
   "description": "Telegram Bot API",
   "main": "index.js",
