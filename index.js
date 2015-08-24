@@ -9,7 +9,7 @@ var token = '116276511:AAH4ZXkuYu9Fxygxxwv01UAYiWgSQ3Yct0I';
 var port = process.env.OPENSHIFT_NODEJS_PORT;
 var host = process.env.OPENSHIFT_NODEJS_IP;
 
-var bot = new TelegramBot(token, {webHook: {port: port, host: host}});
+var bot = new TelegramBot(token, {polling: true});
 // OpenShift enroutes :443 request to OPENSHIFT_NODEJS_PORT
 
 var status = 'main';
