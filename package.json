@@ -7,6 +7,9 @@
     "example": "examples",
     "test": "test"
   },
+  "engines": {
+    "node": "0.12.5"
+  },
   "keywords": [
     "telegram",
     "telegram bot",
