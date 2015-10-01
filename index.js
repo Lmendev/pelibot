@@ -6,10 +6,10 @@ var TelegramBot = require('node-telegram-bot-api');
  
 var token = '116276511:AAH4ZXkuYu9Fxygxxwv01UAYiWgSQ3Yct0I';
 
-var port = process.env.OPENSHIFT_NODEJS_PORT;
-var host = process.env.OPENSHIFT_NODEJS_IP;
+var port = process.env.PORT || 8443;
+var host = process.env.HOST;
 
-var bot = new TelegramBot(token, {polling: true});
+var bot = new TelegramBot(token, {webHook: {port: port, host: host}});
 // OpenShift enroutes :443 request to OPENSHIFT_NODEJS_PORT
 
 var status = 'main';
